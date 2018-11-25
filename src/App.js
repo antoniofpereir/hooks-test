@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import ContextProvider from './ContextProvider';
 import RandomComponent from './RandomComponent';
+
+const style = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+  }
+}
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <RandomComponent />
-      </div>
+      <ContextProvider>
+        <div className="App" style={style.container}>
+          <RandomComponent />
+        </div>
+      </ContextProvider>
     );
   }
 }
