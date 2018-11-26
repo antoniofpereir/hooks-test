@@ -26,9 +26,9 @@ export default function RandomComponent() {
   const awesomeContext = useContext(AwesomeContext);
 
   // Effects Hooks
-  useEffect(() => {
-    setTextFromEffect('After render!');
-  });
+  // useEffect(() => {
+  //   setTextFromEffect('After render!');
+  // });
 
 
   // Handlers
