@@ -4,7 +4,7 @@ import React, {
   useContext
 } from 'react';
 
-import AwesomeContext from './ContextProvider';
+import { AwesomeContext } from './ContextProvider';
 
 const styles = {
   container: {
@@ -13,6 +13,7 @@ const styles = {
     alignItems: 'center',
     flexDirection: 'column',
     width: '30vh',
+    paddingTop: '30px',
   },
 }
 
@@ -48,11 +49,11 @@ export default function RandomComponent() {
         {textFromButton}
         <button onClick={handleClick}>Click me to change text!</button>
       </div>
-      <div>
+      <div style={styles.container}>
         {textFromEffect}
       </div>
-      <div>
-        {/* {awesomeContext.awesomeVariable} */}
+      <div style={styles.container}>
+        {awesomeContext.awesomeVariable}
       </div>
     </React.Fragment>
   );
