@@ -26,10 +26,10 @@ export default function RandomComponent() {
   const awesomeContext = useContext(AwesomeContext);
 
   // Effects Hooks
-  // useEffect(() => {
-  //   setTextFromEffect('After render!');
-  // });
-
+  useEffect(() => {
+    setTextFromEffect('After render!');
+  }, []);
+  // [] as second argument prevents infinite loop, making the effect only run once
 
   // Handlers
   const handleClick = () => setTextFromButton('new lel from button');
