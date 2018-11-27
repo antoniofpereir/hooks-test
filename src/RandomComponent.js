@@ -28,6 +28,7 @@ export default function RandomComponent() {
 
   // Effects Hooks
   useEffect(() => {
+    console.log('In effect hook!');
     setTextFromEffect('After render!');
   }, []);
   // [] as second argument prevents infinite loop, making the effect only run once
