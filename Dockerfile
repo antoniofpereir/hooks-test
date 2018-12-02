@@ -5,20 +5,16 @@ FROM node:11-alpine as build
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-RUN ls
 # Copy the package files to the workdir
 COPY package*.json ./
 
 # Install npm packages
 RUN npm install
 
-RUN ls
 # Copy installation files into directory
 COPY . ./
 
 RUN npm run-script build
-
-RUN ls
 
 # Init server
 FROM nginx:1.12-alpine
